@@ -20,8 +20,6 @@ Install-Package Serilog.Sinks.ReflectInsight
 ###Usage
 
 ```csharp#
-
-using Serilog.Sinks.ReflectInsight;
 using Serilog;
 
 Log.Logger = new LoggerConfiguration()
