@@ -24,7 +24,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace Serilog.Sinks
+namespace Serilog.Sinks.ReflectInsight
 {
     /// <summary>
     /// 

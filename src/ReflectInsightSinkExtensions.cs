@@ -42,7 +42,7 @@ namespace Serilog
                 throw new ArgumentNullException(nameof(sinkConfiguration));
             }
 
-            return sinkConfiguration.Sink(new Serilog.Sinks.ReflectInsightSink(new MessageTemplateTextFormatter("{Message}", null), instance), minLevel);
+            return sinkConfiguration.Sink(new Serilog.Sinks.ReflectInsight.ReflectInsightSink(new MessageTemplateTextFormatter("{Message}", null), instance), minLevel);
         }
     }
 }
