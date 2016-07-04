@@ -29,8 +29,6 @@ Log.Logger = new LoggerConfiguration()
 
 ```
 
-> **Important:** Only one process may write to a log file at a given time. For multi-process scenarios, either use separate files or one of the non-file-based sinks.
-
 * [Documentation](https://github.com/serilog/serilog/wiki)
 
 Copyright &copy; 2016 Serilog Contributors - Provided under the [Apache License, Version 2.0](http://apache.org/licenses/LICENSE-2.0.html).
