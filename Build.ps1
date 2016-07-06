@@ -1,14 +1,30 @@
 Push-Location $PSScriptRoot
 
-& dotnet restore
+if(Test-Path .\artifacts) { Remove-Item .\artifacts -Force -Recurse }
 
-$revision = @{ $true = $env:APPVEYOR_BUILD_NUMBER; $false = 1 }[$env:APPVEYOR_BUILD_NUMBER -ne $NULL];
+& dotnet restore --no-cache
 
-Push-Location src
+$branch = $(git symbolic-ref --short -q HEAD)
+$revision = @{ $true = $env:APPVEYOR_BUILD_NUMBER; $false = "local" }[$env:APPVEYOR_BUILD_NUMBER -ne $NULL];
+$suffix = @{ $true = ""; $false = "$branch-$revision"}[$branch -eq "master" -and $revision -ne "local"]
 
-& dotnet pack -c Release -o ..\.\artifacts --version-suffix=$revision
-if($LASTEXITCODE -ne 0) { exit 1 }    
+foreach ($src in ls src/Serilog.*) {
+    Push-Location $src
 
-Pop-Location
+    & dotnet pack -c Release -o ..\..\.\artifacts --version-suffix=$suffix
+    if($LASTEXITCODE -ne 0) { exit 1 }
+
+    Pop-Location
+}
+
+foreach ($test in ls test/Serilog.*.Tests) {
+    Push-Location $test
+
+    & dotnet test -c Release
+    if($LASTEXITCODE -ne 0) { exit 2 }
+
+    Pop-Location
+}
+
 Pop-Location
 
