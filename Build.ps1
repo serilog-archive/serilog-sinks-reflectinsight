@@ -17,14 +17,16 @@ foreach ($src in ls src/Serilog.*) {
     Pop-Location
 }
 
-foreach ($test in ls test/Serilog.*.Tests) {
-    Push-Location $test
+## No tests at this time. Uncomment when appropriate
 
-    & dotnet test -c Release
-    if($LASTEXITCODE -ne 0) { exit 2 }
+#foreach ($test in ls test/Serilog.*.Tests) {
+#    Push-Location $test
 
-    Pop-Location
-}
+#    & dotnet test -c Release
+#    if($LASTEXITCODE -ne 0) { exit 2 }
+
+#    Pop-Location
+#}
 
 Pop-Location
 

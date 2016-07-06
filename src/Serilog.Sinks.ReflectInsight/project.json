@@ -16,7 +16,7 @@
     "ReflectSoftware.Insight": "5.6.0"
   },
   "buildOptions": {
-    "keyFile": "../assets/Serilog.snk",
+    "keyFile": "../../assets/Serilog.snk",
     "xmlDoc": true
   },
   "frameworks": {
