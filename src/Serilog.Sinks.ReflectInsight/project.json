@@ -13,13 +13,13 @@
   },
   "dependencies": {
     "Serilog": "2.0.0",
-    "ReflectSoftware.Insight": "5.6.0"
+    "ReflectSoftware.Insight": "5.6.1.2"
   },
   "buildOptions": {
     "keyFile": "../../assets/Serilog.snk",
     "xmlDoc": true
   },
   "frameworks": {
-    "net4.5": {}
+    "net4.5.1": {}
     }
 }
