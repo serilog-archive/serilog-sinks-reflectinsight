@@ -1,11 +1,30 @@
 ﻿{
   "version": "2.0.0",
   "description": "The ReflectInsight sink for Serilog",
-  "authors": [ "Serilog Contributors" ],
+  "authors": [
+    "Serilog Contributors"
+  ],
   "packOptions": {
-    "tags": [ "serilog", "reflectinsight", "serilog", "sink", "logging", "log", "logfiles", "events", "exception", "handling", "structured", "tracing", "trace", "debug", "diagnostic" ],
+    "tags": [
+      "serilog",
+      "reflectinsight",
+      "sink",
+      "logging",
+      "log",
+      "logfiles",
+      "events",
+      "exception",
+      "handling",
+      "structured",
+      "tracing",
+      "trace",
+      "debug",
+      "diagnostic"
+    ],
     "requireLicenseAcceptance": false,
-    "owners": [ "ReflectSoftware Inc." ],
+    "owners": [
+      "ReflectSoftware Inc."
+    ],
     "summary": "The ReflectInsight Serilog sink makes it easy to integrate ReflectInsight into your existing application logging infrastructure and leverage the power of the ReflectInsight log viewer.",
     "projectUrl": "http://serilog.net",
     "licenseUrl": "http://www.apache.org/licenses/LICENSE-2.0",
@@ -16,10 +35,10 @@
     "ReflectSoftware.Insight": "5.6.1.2"
   },
   "buildOptions": {
-    "keyFile": "../assets/Serilog.snk",
+    "keyFile": "../../assets/Serilog.snk",
     "xmlDoc": true
   },
   "frameworks": {
     "net4.5.1": {}
-    }
+  }
 }

@@ -1,16 +1,16 @@
-﻿// Copyright 2016 Serilog Contributors 
-//  
-// Licensed under the Apache License, Version 2.0 (the "License"); 
-// you may not use this file except in compliance with the License. 
-// You may obtain a copy of the License at 
-//  
-//     http://www.apache.org/licenses/LICENSE-2.0 
-//  
-// Unless required by applicable law or agreed to in writing, software 
-// distributed under the License is distributed on an "AS IS" BASIS, 
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-// See the License for the specific language governing permissions and 
-// limitations under the License. 
+﻿// Copyright 2016 Serilog Contributors
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
 
 using ReflectSoftware.Insight;
 using ReflectSoftware.Insight.Common;
@@ -27,7 +27,7 @@ using System.Text;
 namespace Serilog.Sinks.ReflectInsight
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     /// <seealso cref="Serilog.Core.ILogEventSink" />
     public class ReflectInsightSink : ILogEventSink
@@ -68,7 +68,7 @@ namespace Serilog.Sinks.ReflectInsight
                 {
                     message = logEvent.MessageTemplate.Text;
                 }
-                
+
                 var messageType = MessageType.SendDebug; // default
                 switch (logEvent.Level)
                 {
@@ -82,7 +82,7 @@ namespace Serilog.Sinks.ReflectInsight
 
                 var propTokens = logEvent.MessageTemplate.Tokens.Where(x => x is PropertyToken).Select(x => (x as PropertyToken).PropertyName);
                 var nonTokenProps = logEvent.Properties.Where(x => !propTokens.Contains(x.Key)).Select(x => x);
-                
+
                 strBuilder.Clear();
                 strBuilder.Capacity = 0;
 
