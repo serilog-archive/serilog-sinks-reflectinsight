@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Serilog Contributors
+﻿// Copyright 2017 Serilog Contributors
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -27,7 +27,7 @@ using System.Text;
 namespace Serilog.Sinks.ReflectInsight
 {
     /// <summary>
-    ///
+    /// ReflectInsight Sink
     /// </summary>
     /// <seealso cref="Serilog.Core.ILogEventSink" />
     public class ReflectInsightSink : ILogEventSink

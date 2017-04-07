@@ -1,7 +1,7 @@
 ﻿# https://github.com/rubicon-oss/LicenseHeaderManager/wiki/Expendable-Properties
 extensions: designer.cs generated.cs
 extensions: .cs .cpp .h
-// Copyright 2016 Serilog Contributors 
+// Copyright 2017 Serilog Contributors 
 //  
 // Licensed under the Apache License, Version 2.0 (the "License"); 
 // you may not use this file except in compliance with the License. 
@@ -17,7 +17,7 @@ extensions: .cs .cpp .h
 
 extensions: .aspx .ascx
 <%-- 
-	* Copyright 2016 Serilog Contributors 
+	* Copyright 2017 Serilog Contributors 
 	*  
 	* Licensed under the Apache License, Version 2.0 (the "License"); 
 	* you may not use this file except in compliance with the License. 
@@ -33,7 +33,7 @@ extensions: .aspx .ascx
 --%>
 extensions:  .xml .config .xsd
 <!--
-	* Copyright 2016 Serilog Contributors 
+	* Copyright 2017 Serilog Contributors 
 	*  
 	* Licensed under the Apache License, Version 2.0 (the "License"); 
 	* you may not use this file except in compliance with the License. 
