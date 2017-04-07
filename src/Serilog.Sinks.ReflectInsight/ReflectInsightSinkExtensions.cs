@@ -20,12 +20,12 @@ using System;
 namespace Serilog
 {
     /// <summary>
-    /// 
+    /// Serilog Sink extension for ReflectInsight
     /// </summary>
     static public class ReflectInsightSinkExtensions
     {
         /// <summary>
-        /// Reflects the insight.
+        /// Logger Sink Configuration
         /// </summary>
         /// <param name="sinkConfiguration">The sink configuration.</param>
         /// <param name="instance">The instance.</param>
