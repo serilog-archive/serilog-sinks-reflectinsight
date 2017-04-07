@@ -31,6 +31,7 @@ Log.Logger = new LoggerConfiguration()
                    .CreateLogger();
 ```
 
+
 ### Documentation
 
 - Serilog [Documentation](https://github.com/serilog/serilog/wiki)
