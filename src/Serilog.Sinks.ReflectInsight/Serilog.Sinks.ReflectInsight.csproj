@@ -20,7 +20,7 @@
 
   <ItemGroup>
     <PackageReference Include="Serilog" Version="2.4.0" />
-    <PackageReference Include="ReflectSoftware.Insight" Version="5.6.1.2" />
+    <PackageReference Include="ReflectSoftware.Insight" Version="5.7.1.1" />
   </ItemGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'net451' ">
